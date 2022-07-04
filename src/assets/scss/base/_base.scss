@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  margin: 0;
+}
+
+body {
+  background-color: #fdf7ed;
+  color: #4B4C4C;
+  &.opened-menu {
+    overflow: hidden;
+  }
+  @include r(600) {
+    padding-top: 0 !important;
+  }
+}
+
+
+
+
+
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+//* {
+//  outline: 2px solid navy;
+//}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.inner {
+  padding: 0 30px;
+}
+
+.wrapper {
+  width: calc(100% - 190px);
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  font-family: 'GTEestiProDisplay', sans-serif;
+}
+
+.flex {
+  display: flex;
+  &_h-center {
+    align-items: center;
+  }
+  &_w-center {
+    justify-content: center;
+  }
+  &_all-center{
+    align-items: center;
+    justify-content: center;
+  }
+  &_all-sb {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_wrap {
+    flex-wrap: wrap;
+  }
+}
+
+
+.btn {
+  border: 2px solid #59596f;
+  padding: 10px 19px;
+  font-size: 24px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  &_grey {
+    color: #59596f;
+  }
+  &_orange {
+    color: #ddd9d4;
+    background-color: #ae6a49;
+    border-color: #ae6a49;
+  }
+}
+
+
+
+
+
+

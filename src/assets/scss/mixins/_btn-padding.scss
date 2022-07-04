@@ -1,0 +1,3 @@
+@mixin btnPadding($top, $sides, $bottom) {
+  padding: $top + px $sides + px $bottom + px;
+}

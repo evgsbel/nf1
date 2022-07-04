@@ -1,0 +1,10 @@
+@mixin focus {
+  outline: 1px solid $white;
+  outline-offset: 3px;
+}
+
+@mixin active {
+  color: $red;
+  transform: scale(.9);
+  outline: none;
+}

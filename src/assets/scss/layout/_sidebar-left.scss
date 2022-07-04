@@ -1,0 +1,50 @@
+.sidebar {
+  width: 190px;
+  flex: 0 0 190px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  border-right: 1px solid #000;
+
+  &__btn {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 41px;
+    font-weight: 100;
+    color: #efede8;
+    text-transform: uppercase;
+    line-height: 1.2;
+    width: 50%;
+    height: 100%;
+
+    p {
+      transform: rotate(-180deg);
+      writing-mode: tb-rl;
+      height: 500px;
+      display: flex;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -6px;;
+        background-image: url('../img/sd-bxsh-2.png');
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+      }
+    }
+    &.is-active {
+      background-color: #ae6a49;
+      position: relative;
+      z-index: 50;
+      p {
+        &::before {
+          background-image: url('../img/sd-bxsh-1.png');
+        }
+      }
+    }
+  }
+}
+
