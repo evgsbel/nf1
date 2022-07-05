@@ -719,6 +719,15 @@ ul {
   display: flex;
   gap: 16px;
 }
+.header__btn {
+  position: relative;
+  z-index: 50;
+}
+
+.logo {
+  position: relative;
+  z-index: 50;
+}
 
 .sidebar {
   width: 190px;
@@ -874,7 +883,6 @@ body {
 .hero {
   position: relative;
   z-index: 20;
-  height: 100vh;
   padding-top: 150px;
   padding-bottom: 40px;
   background-image: url("../img/hero-bg.png");
