@@ -117,7 +117,7 @@ script: main
 </section>
 <section class="symptoms">
   <ul class="symptoms__list flex flex_wrap">
-    <li class="symptoms__item">
+    <li class="symptoms__item js-symptoms-card">
       <div class="flex">
         <span>6></span>
         <img src="assets/img/smp-01.png" alt="" class="symptoms__img">
@@ -125,8 +125,11 @@ script: main
       <p class="symptoms__description">Шесть и более пятен
         цвета «кофе с молоком»
         на коже</p>
+      <div class="symptoms__hide js-symptoms-hide">
+        <p>Они заметны невооруженным глазом.</p>
+      </div>
     </li>
-    <li class="symptoms__item">
+    <li class="symptoms__item js-symptoms-card">
       <div class="flex">
         <span>2></span>
         <img src="assets/img/smp-02.png" alt="" class="symptoms__img">
@@ -135,33 +138,50 @@ script: main
         нейрофибромы либо
         одна плексиформная
         нейрофиброма</p>
+      <div class="symptoms__hide js-symptoms-hide">
+        <p> С этим сложнее - заметные “узелки” под кожей бывают очень разных видов, а нейрофибромы могут прятаться по
+          всему организму. Нейрофиброму вряд ли можно распознать в домашних условиях, здесь нужна профессиональная
+          диагностика.
+        </p>
+      </div>
     </li>
-    <li class="symptoms__item">
+    <li class="symptoms__item js-symptoms-card">
       <img src="assets/img/smp-03.png" alt="" class="symptoms__img">
       <p class="symptoms__description">Гиперпигментация
         по типу веснушек
         не только на лице</p>
+      <div class="symptoms__hide js-symptoms-hide">
+        <p>Обратите внимание на область подмышек, на сгибах локтей и коленей и в паху.</p>
+      </div>
     </li>
-    <li class="symptoms__item">
+    <li class="symptoms__item js-symptoms-card">
       <img src="assets/img/smp-04.png" alt="" class="symptoms__img">
       <p class="symptoms__description">Характерные костные
         аномалии – проблемы
         с опорно-двигательным
         аппаратом</p>
+      <div class="symptoms__hide js-symptoms-hide">
+        <p>Деформации позвоночника и костей по всему телу могут быть явными и/или выявляться с использованием диагностического оборудования (рентген, КТ, МРТ).
+        </p>
+      </div>
     </li>
-    <li class="symptoms__item">
+    <li class="symptoms__item js-symptoms-card">
       <img src="assets/img/smp-05.png" alt="" class="symptoms__img">
       <p class="symptoms__description">Два и более узелка
         Лиша и/или Глиомы
         зрительных нервов</p>
+      <div class="symptoms__hide js-symptoms-hide">
+        <p>Это пятнышки вокруг зрачка.</p>
+      </div>
     </li>
-    <li class="symptoms__item">
+    <li class="symptoms__item js-symptoms-card">
       <img src="assets/img/smp-06.png" alt="" class="symptoms__img">
-      <p class="symptoms__description">НФ1 есть у ближайших
-        родственников:
-        родители, братья,
-        сестры.
+      <p class="symptoms__description">Глиомы (опухоли) зрительных нервов
       </p>
+      <div class="symptoms__hide js-symptoms-hide">
+        <p>Чаще всего проявляются ухудшением зрения, точно распознать их может только специальная врачебная диагностика.
+        </p>
+      </div>
     </li>
   </ul>
   <p class="symptoms__text">Подробнее о симптомах НФ1, его проявлениях,
@@ -207,3 +227,4 @@ script: main
     <a href="" class="what__tlg">Telegram</a>
   </div>
 </section>
+
