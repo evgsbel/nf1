@@ -83,7 +83,19 @@ var studiesCards = {
 
 
 $(document).ready(function () {
-
   studiesCards.init();
-
 });
+
+(function($){
+  $(window).on("load",function(){
+    $("a[href*='#']").mPageScroll2id({
+      offset: 20,
+      highlightClass:"active",
+      forceSingleHighlight:true,
+    });
+
+  });
+})(jQuery);
+
+
+

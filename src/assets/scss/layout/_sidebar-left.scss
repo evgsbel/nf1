@@ -48,3 +48,17 @@
   }
 }
 
+.inner-page {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    &__btn {
+      padding-top: 30vh;
+    }
+  }
+  .sidebar__btn_people {
+    background-color: #686975;
+  }
+}
+
