@@ -34,15 +34,15 @@ body {
 .hero {
   position: relative;
   z-index: 20;
-
-  padding-top: 150px;
+  padding-top: 200px;
   padding-bottom: 40px;
   background-image: url('../img/hero-bg.png');
-  background-size: 55%;
+  background-size: 70%;
   background-repeat: no-repeat;
-  background-position: 29% -90px;
+  background-position: 0% -170px;
+  height: 100vh;
   @include r(1440) {
-    background-position: 50% -20px;
+    background-position: 35% -20px;
   }
   @include r(1366) {
     background-size: 62%;
@@ -64,7 +64,9 @@ body {
     text-transform: uppercase;
     line-height: 0.8;
     color: rgba(75, 87, 105, 0.7);
-
+@include rmin(1440) {
+  margin-bottom: 70px;
+}
     &::before {
       content: '';
       position: absolute;
@@ -303,25 +305,50 @@ body {
     position: relative;
     flex: 0 0 23%;
     padding: 36px 0;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(-100% - 96px);
+      width: 100%;
+      height: 480px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
     &:first-child {
       background-color: #ad6949;
+      &::before {
+        background-image: url('../img/th-01.png');
+      }
     }
 
     &:nth-child(2) {
       background-color: #be8668;
+      &::before {
+        background-image: url('../img/th-02.png');
+      }
     }
 
     &:nth-child(3) {
       background-color: #cea18c;
+      &::before {
+        background-image: url('../img/th-03.png');
+      }
     }
 
     &:nth-child(4) {
       background-color: #6d6d72;
+      &::before {
+        background-image: url('../img/th-04.png');
+      }
     }
 
     &:last-child {
       background-color: #2f3243;
+      &::before {
+        background-image: url('../img/th-05.png');
+      }
     }
 
     p {
