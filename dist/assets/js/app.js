@@ -81,9 +81,19 @@ $(document).ready(function () {
 (function ($) {
   $(window).on("load", function () {
     $("a[href*='#']").mPageScroll2id({
-      offset: 20,
+      offset: 120,
       highlightClass: "active",
       forceSingleHighlight: true
     });
   });
-})(jQuery);
+})(jQuery); //video autoplay
+
+
+$(function () {
+  $('.js-play-video').click(function (ev) {
+    $(this).addClass('is-playing');
+    $('.video__play').fadeOut(100);
+    $('.video__frame').fadeIn(100);
+    $(".video__frame")[0].src += "?autoplay=1";
+  });
+});

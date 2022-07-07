@@ -13,16 +13,43 @@
   }
 }
 
-.logo {
+.logo,
+.logo-white {
   position: relative;
   z-index: 50;
 }
 
-.inner-page {
+.logo-white {
+  display: none;
+}
+
+.is-about-page {
   .header {
+    z-index: 30;
+    background-image: url('../img/about-header-bg.png');
+    background-size: cover;
     position: fixed;
-    &__btns {
-      display: none;
-    }
+    width: calc(100% - 190px);
+    padding-bottom: 30px;
+  }
+}
+
+.is-people-page {
+  .header {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: calc(100% - 190px);
+    z-index: 60;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-white {
+    display: block;
+  }
+  .btn_grey {
+    color: #fff9e9;
+    border-color: #fff9e9;
   }
 }
