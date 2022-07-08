@@ -83,7 +83,14 @@ $(document).ready(function () {
     $("a[href*='#']").mPageScroll2id({
       offset: 120,
       highlightClass: "active",
-      forceSingleHighlight: true
+      forceSingleHighlight: true,
+      onStart: function onStart() {
+        var openBtn = document.querySelector('.question__open');
+        var cardList = document.querySelector('.question__list');
+        cardList.style.maxHeight = 0;
+        openBtn.classList.remove('is-active');
+        cardList.classList.remove('is-active');
+      }
     });
   });
 })(jQuery); //video autoplay
@@ -132,15 +139,15 @@ $(function () {
 $(function () {
   var openBtn = document.querySelector('.question__open');
   var cardList = document.querySelector('.question__list');
-
-  var toggleCards = function toggleCards() {
-    cardList.classList.toggle('is-open'); // menu.style.height = heroHeight + headerHeight + 'px'
-
-    openBtn.classList.toggle('is-active');
-  };
-
-  openBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    toggleCards();
+  openBtn.addEventListener('click', function () {
+    if (cardList.classList.contains('is-active')) {
+      cardList.classList.remove('is-active');
+      openBtn.classList.remove('is-active');
+      cardList.style.maxHeight = 0;
+    } else {
+      openBtn.classList.add('is-active');
+      cardList.classList.add('is-active');
+      cardList.style.maxHeight = cardList.scrollHeight + 20 + 'px';
+    }
   });
 });
