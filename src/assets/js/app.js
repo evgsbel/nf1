@@ -107,3 +107,57 @@ $(() => {
     $(".video__frame")[0].src += "?autoplay=1";
   })
 })
+
+
+// mobile menu
+$(() => {
+  const btnMenu = document.querySelector('.burger');
+  const menu = document.querySelector('.mobile-nav');
+  const body = document.querySelector('body');
+  // let heroHeight = document.querySelector('.hero').clientHeight
+  // let headerHeight = document.querySelector('.header').clientHeight
+
+  const toggleMenu = function () {
+    menu.classList.add('is-open');
+    // menu.style.height = heroHeight + headerHeight + 'px'
+    btnMenu.classList.add('is-active');
+    body.classList.add('opened-menu');
+  };
+
+  btnMenu.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  const closeBtn = document.querySelector('.close');
+  const closeMenu = function () {
+    menu.classList.remove('is-open');
+    body.classList.remove('opened-menu');
+    btnMenu.classList.remove('is-active');
+  };
+
+  closeBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeMenu();
+  });
+});
+
+// open cards
+
+
+
+$(() => {
+  const openBtn = document.querySelector('.question__open');
+  const cardList = document.querySelector('.question__list');
+  const toggleCards = function () {
+    cardList.classList.toggle('is-open');
+    // menu.style.height = heroHeight + headerHeight + 'px'
+    openBtn.classList.toggle('is-active');
+  };
+
+  openBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleCards();
+
+  });
+})

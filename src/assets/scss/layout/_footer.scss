@@ -1,16 +1,24 @@
 .footer {
   padding: 62px 0 108px;
   background-color: #1d1e28;
+  position: relative;
+  z-index: 50;
 
   .inner {
     width: calc(100% - 320px);
     margin-left: auto;
     margin-right: auto;
+    @include r(1024) {
+      width: 100%;
+    }
   }
 
   &__flex {
     gap: 55px;
     align-items: flex-start;
+    @include r(1024) {
+      flex-wrap: wrap;
+    }
   }
 
   &__top-text {
@@ -26,23 +34,50 @@
     font-size: 14px;
     color: #636c93;
     line-height: 1.2;
+    @include r(1024) {
+      flex-basis: 100%;
+    }
+    @include r(768) {
+      order: 1;
+    }
   }
 }
 
 
 .nav {
+  @include r(768) {
+    width: 100%;
+    order: 0;
+  }
   &__list {
     display: flex;
     align-items: flex-start;
     gap: 10px 40px;
+    @include r(768) {
+      gap: 20px 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
+
   &__item {
     flex: 0 0 calc((100% - 1 * 40px) / 2);
+    @include r(768) {
+      flex: 0 0 auto;
+    }
   }
   &__link {
       font-size: 17px;
       color: #ae6a49;
       text-decoration: underline;
       line-height: 1.2;
+  }
+}
+
+.is-about-page {
+  .footer {
+    display: none;
   }
 }

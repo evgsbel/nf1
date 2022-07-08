@@ -5,6 +5,9 @@
   align-items: flex-start;
   position: relative;
   border-right: 1px solid #000;
+  @include r(768) {
+    display: none;
+  }
 
   &__btn {
     flex: 0 0 50%;

@@ -67,6 +67,9 @@ a {
 
 .wrapper {
   width: calc(100% - 190px);
+  @include r(768) {
+    width: 100%;
+  }
 }
 
 img {
@@ -122,7 +125,28 @@ img {
 }
 
 
+.only-desktop {
+  @include r(768) {
+    display: none;
+  }
+}
 
-
-
-
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  @include r(768) {
+    display: block;
+  }
+  .icon-close {
+    display: none;
+  }
+  &.is-active {
+    .icon-open {
+      display: none;
+    }
+    .icon-close {
+      display: block;
+    }
+  }
+}
