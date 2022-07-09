@@ -429,6 +429,8 @@ main {
 body {
   background-color: #fdf7ed;
   color: #4B4C4C;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 body.opened-menu {
   overflow: hidden;
@@ -534,14 +536,29 @@ img {
   padding: 10px 19px;
   font-size: 24px;
   border-radius: 23px;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 .btn_grey {
   color: #59596f;
+}
+.btn_grey:hover {
+  background-color: #1f273d;
+  color: #ddd5d1;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 .btn_orange {
   color: #ddd9d4;
   background-color: #ae6a49;
   border-color: #ae6a49;
+}
+.btn_orange:hover {
+  color: #2f3042;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -936,6 +953,8 @@ ul {
   line-height: 1.2;
   width: 50%;
   height: 100%;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s cubic-bezier(0.43, 0.4, 0.43, 0.97);
+  transition: color 0.3s ease-in-out, background-color 0.3s cubic-bezier(0.43, 0.4, 0.43, 0.97);
 }
 .sidebar__btn p {
   -webkit-transform: rotate(-180deg);
@@ -959,19 +978,27 @@ ul {
   width: 70px;
   height: 70px;
 }
-.sidebar__btn.is-active {
+.sidebar__btn_about {
   background-color: #ae6a49;
   position: relative;
   z-index: 50;
 }
-.sidebar__btn.is-active p::before {
+.sidebar__btn_about p::before {
   background-image: url("../img/sd-bxsh-1.png");
+}
+.sidebar__btn_about:hover {
+  color: #1f273d;
+}
+.sidebar__btn_people:hover {
+  background-color: #1f273d;
+  color: #986752;
 }
 
 .is-about-page .sidebar {
   position: fixed;
   height: 100vh;
   right: 0;
+  z-index: 30;
 }
 .is-about-page .sidebar__btn {
   padding-top: 30vh;
@@ -1115,6 +1142,8 @@ ul {
 body {
   background-image: url("../img/ct-bg-white.png");
   background-repeat: repeat;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .main .main-flex {
@@ -1145,6 +1174,10 @@ body {
           flex: 0 0 190px;
   width: 190px;
   margin-left: auto;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 @media only screen and (max-width: 1366px) {
   .right-btns {
@@ -1152,11 +1185,23 @@ body {
   }
 }
 .right-btns__btn {
+  display: block;
+  text-align: center;
   margin-bottom: 16px;
+}
+.right-btns__btn:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 .right-btns__btn_white {
   color: #fff9e9;
   border-color: #fff9e9;
+}
+.right-btns__btn_white:hover {
+  background-color: #ddd5d1;
+  color: #1e243b;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
 
 .hero {
@@ -1425,11 +1470,17 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 @media only screen and (max-width: 768px) {
   .description__bottom-btn {
     margin: 0 auto;
   }
+}
+.description__bottom-btn:hover {
+  color: #161d30;
+  background-color: #f3e9e1;
 }
 
 .how {
@@ -1679,8 +1730,8 @@ body {
 .time__item::before {
   content: "";
   position: absolute;
-  left: -30px;
-  top: 0;
+  left: 0;
+  top: -190px;
   width: 100%;
   height: 480px;
   background-repeat: no-repeat;
@@ -1690,13 +1741,15 @@ body {
   .time__item::before {
     width: 205%;
     height: 100%;
+    left: -30px;
+    top: 0;
   }
 }
 .time__item:first-child {
   background-color: #ad6949;
 }
 @media only screen and (max-width: 576px) {
-  .time__item:first-child p {
+  .time__item:first-child .time__caption {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
@@ -1753,7 +1806,7 @@ body {
     background-image: url("../img/thm-05.png");
   }
 }
-.time__item p {
+.time__caption {
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -2152,6 +2205,12 @@ body {
   width: -moz-max-content;
   width: max-content;
   padding: 2px 23px;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.symptoms__link:hover {
+  background-color: #191E33;
+  color: #f4ebe0;
 }
 
 .what {
@@ -2289,6 +2348,12 @@ body {
   line-height: 1.2;
   border-radius: 28px;
   padding: 11px 23px;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.what__nf:hover {
+  background-color: #f4ebe0;
+  color: #2c2c55;
 }
 .what__phone {
   width: 76px;
@@ -2304,6 +2369,20 @@ body {
           align-items: center;
   border-radius: 50%;
   border: 2px solid #323343;
+  color: #f6ece3;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.what__phone svg {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+  -webkit-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+}
+.what__phone:hover {
+  background-color: #f6ece3;
+  color: #2c2c55;
 }
 .what__tlg {
   background-color: #ece7e1;
@@ -2314,6 +2393,12 @@ body {
   line-height: 1.2;
   border-radius: 28px;
   padding: 11px 23px;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.what__tlg:hover {
+  background-color: #191E33;
+  color: #f4ebe0;
 }
 
 .is-about-page {

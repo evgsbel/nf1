@@ -18,6 +18,8 @@ main {
 body {
   background-color: #fdf7ed;
   color: #4B4C4C;
+  overflow-x: hidden;
+  max-width: 100%;
   &.opened-menu {
     overflow: hidden;
   }
@@ -114,13 +116,23 @@ img {
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   border-radius: 23px;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, box-shadow .3s ease-in-out;
   &_grey {
     color: #59596f;
+    &:hover {
+      background-color: #1f273d;
+      color: #ddd5d1;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    }
   }
   &_orange {
     color: #ddd9d4;
     background-color: #ae6a49;
     border-color: #ae6a49;
+    &:hover {
+      color: #2f3042;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    }
   }
 }
 

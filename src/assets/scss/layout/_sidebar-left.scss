@@ -20,6 +20,7 @@
     line-height: 1.2;
     width: 50%;
     height: 100%;
+    transition: color .3s ease-in-out, background-color .3s cubic-bezier(.43,.4,.43,.97);
 
     p {
       transform: rotate(-180deg);
@@ -38,14 +39,24 @@
         height: 70px;
       }
     }
-    &.is-active {
+    &_about {
       background-color: #ae6a49;
       position: relative;
       z-index: 50;
+
       p {
         &::before {
           background-image: url('../img/sd-bxsh-1.png');
         }
+      }
+      &:hover {
+        color: #1f273d;
+      }
+    }
+    &_people {
+      &:hover {
+        background-color: #1f273d;
+        color: #986752;
       }
     }
   }
@@ -56,6 +67,7 @@
     position: fixed;
     height: 100vh;
     right: 0;
+    z-index: 30;
     &__btn {
       padding-top: 30vh;
     }

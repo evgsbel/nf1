@@ -18,10 +18,10 @@
 <header class="header">
   <div class="container">
     <div class="flex flex_all-sb header__flex inner">
-      <a href="" class="logo header__Logo">
+      <a href="/" class="logo header__Logo">
         <img src="assets/img/logo.png" alt="">
       </a>
-      <a href="" class="logo-white header__Logo">
+      <a href="/" class="logo-white header__Logo">
         <img src="assets/img/logo-white.png" alt="">
       </a>
       <div class="header__btns">
@@ -41,8 +41,8 @@
                     d="M1.458,0.242 L13.994,12.778 L26.531,0.242 C26.867,0.92 27.411,0.92 27.747,0.242 C28.82,0.578 28.82,1.122 27.747,1.458 L15.209,13.994 L27.747,26.531 C28.82,26.867 28.82,27.411 27.747,27.747 C27.411,28.83 26.867,28.83 26.531,27.747 L13.994,15.210 L1.458,27.747 C1.122,28.83 0.578,28.83 0.242,27.747 C0.92,27.411 0.92,26.867 0.242,26.531 L12.778,13.994 L0.242,1.458 C0.92,1.122 0.92,0.578 0.242,0.242 C0.578,0.92 1.122,0.92 1.458,0.242 L1.458,0.242 Z"/>
             </svg>
         </button>
-        <button class="btn btn_grey btn-reset header__btn">Симптомы</button>
-        <button class="btn btn_orange btn-reset header__btn">Что делать?</button>
+        <button rel="symptoms" class="main-ancor btn btn_grey btn-reset header__btn">Симптомы</button>
+        <button rel="what" class="main-ancor btn btn_orange btn-reset header__btn">Что делать?</button>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
   </ul>
 </div>
 <main role="main" class="main">
-  <section class="hero">
+  <section class="hero" id="one">
     <div class="container">
       <div class="inner">
         <p class="hero__subtitle">Это социально-информационный проект
@@ -79,23 +79,23 @@
   </section>
   <div class="container flex main-flex">
     <sidebar class="sidebar">
-      <button class="btn-reset sidebar__btn sidebar__btn_about is-active"><p>О нейрофиброматозe</p></button>
-      <button class="btn-reset sidebar__btn sidebar__btn_people"><p>О людях</p></button>
+      <a class="btn-reset sidebar__btn sidebar__btn_about is-active" href="about.html"><p>О нейрофиброматозe</p></a>
+      <a class="btn-reset sidebar__btn sidebar__btn_people" href="people.html"><p>О людях</p></a>
     </sidebar>
     <div class="inner wrapper">
       <div class="flex">
         <div class="content">
           
           
-          <div class="description">
+          <div class="description work_item">
             <div class="flex description__flex">
               <div class="description__left">
-                <p class="description__top">Одно из проявлений НФ1 - пятна
+                <p class="description__top stagger_body">Одно из проявлений НФ1 - пятна
                   на коже цвета кофе с молоком.</p>
-                <p class="description__top">Но каждое такое пятно – это
+                <p class="description__top stagger_body">Но каждое такое пятно – это
                   не повод ставить точку
                   и&nbsp;опускать&nbsp;руки.</p>
-                <p class="description__center">
+                <p class="description__center stagger_body">
                   <span>НФ1</span>
                   Нейрофиброматоз 1 типа – редкое генетическое заболевание. К сожалению, пока
                   его невозможно излечить полностью. Но это вовсе
@@ -103,19 +103,19 @@
                   на сложности, с НФ1 можно вести полноценную жизнь, сохранять положительный настрой, быть открытым миру и его
                   многочисленным возможностям.</p>
                 <div class="flex description__bottom">
-                  <p>Познакомиться с&nbsp;людьми,&nbsp;которые&nbsp;живут с нейрофиброматозом 1 типа</p>
-                  <button class="btn-reset description__bottom-btn">О людях</button>
+                  <p class="stagger_body">Познакомиться с&nbsp;людьми,&nbsp;которые&nbsp;живут с нейрофиброматозом 1 типа</p>
+                  <button class="btn-reset description__bottom-btn stagger_body">О людях</button>
                 </div>
                 </p>
           
               </div>
             </div>
           </div>
-          <section class="how">
-            <p class="how__title">Как распознать Нейрофиброматоз </p>
-            <p class="how__subtitle">Нейрофиброматоз 1 типа - сложное заболевание,
+          <section class="how work_item" id="symptoms">
+            <p class="how__title stagger_body">Как распознать Нейрофиброматоз </p>
+            <p class="how__subtitle stagger_body">Нейрофиброматоз 1 типа - сложное заболевание,
               но бояться его не нужно. Необходимо знать, на что обратить внимание и как действовать в случае подозрений.</p>
-            <p class="how__orange">Диагноз может быть поставлен, если одновременно наблюдаются два и более симптомов из этого
+            <p class="how__orange stagger_body">Диагноз может быть поставлен, если одновременно наблюдаются два и более симптомов из этого
               списка
               <span> не пугайтесь, все сложные названия объясняются на карточках</span>
             </p>
@@ -144,60 +144,60 @@
           <section class="time">
             <ul class="time__list">
               <li class="time__item">
-                <p>Рождение</p>
-                <div class="time__descr time__descr_top time__descr_01">Пятна цвета
-                  «кофе&nbsp;с&nbsp;молоком»
+                <p class="time__caption">Рождение</p>
+                <div class="time__descr time__descr_top time__descr_01"><p>Пятна цвета
+                  «кофе&nbsp;с&nbsp;молоком»</p>
                 </div>
-                <div class="time__descr time__descr_bottom time__descr_02">Деформация <br class="only-desktop"> длинных <br class="only-desktop"> трубчатых <br class="only-desktop"> костей
+                <div class="time__descr time__descr_bottom time__descr_02"><p>Деформация <br class="only-desktop"> длинных <br class="only-desktop"> трубчатых <br class="only-desktop"> костей</p>
                 </div>
               </li>
               <li class="time__item">
-                <p>1 год</p>
-                <div class="time__descr time__descr_top time__descr_03">Неврологическая симптоматика</div>
-                <div class="time__descr time__descr_bottom time__descr_04">Плексиформные нейрофибромы
+                <p class="time__caption">1 год</p>
+                <div class="time__descr time__descr_top time__descr_03"><p>Неврологическая симптоматика</p></div>
+                <div class="time__descr time__descr_bottom time__descr_04"><p>Плексиформные нейрофибромы
                   <span>(но могут проявиться
-                  и&nbsp;в&nbsp;старшем возрасте)</span>
+                  и&nbsp;в&nbsp;старшем возрасте)</span></p>
                 </div>
               </li>
               <li class="time__item">
-                <p>6 лет</p>
-                <div class="time__descr time__descr_top time__descr_05">Гиперпигментация <br class="only-desktop">
-                  по типу веснушек
+                <p class="time__caption">6 лет</p>
+                <div class="time__descr time__descr_top time__descr_05"><p>Гиперпигментация <br class="only-desktop">
+                  по типу веснушек</p>
                 </div>
                 <div class="time__descr time__descr_bottom time__descr_06">
-                  Сколиоз
-                  <span>(6-10 лет)</span>
+                  <p>Сколиоз
+                    <span>(6-10 лет)</span></p>
                 </div>
                 <div class="time__descr time__descr_top time__descr_07">
-                  Глиомы <br class="only-desktop">
+                  <p>Глиомы <br class="only-desktop">
                   зрительных <br class="only-desktop">
-                  нервов
+                    нервов</p>
                 </div>
               </li>
               <li class="time__item">
-                <p>13 лет</p>
-                <div class="time__descr time__descr_top time__descr_08">Раннее или позднее половое созревание</div>
-                <div class="time__descr time__descr_bottom time__descr_09">Проблемы <br class="only-desktop">
+                <p class="time__caption">13 лет</p>
+                <div class="time__descr time__descr_top time__descr_08"><p>Раннее или позднее половое созревание</p></div>
+                <div class="time__descr time__descr_bottom time__descr_09"><p>Проблемы <br class="only-desktop">
                   с&nbsp;обучением <br class="only-desktop">
-                  или поведением
+                  или поведением</p>
                 </div>
-                <div class="time__descr time__descr_bottom time__descr_010">Узелки <br class="only-desktop">
-                  Лиша
+                <div class="time__descr time__descr_bottom time__descr_010"><p>Узелки <br class="only-desktop">
+                  Лиша</p>
                 </div>
-                <div class="time__descr time__descr_top time__descr_011">Кожные
-                  нейрофибромы
+                <div class="time__descr time__descr_top time__descr_011"><p>Кожные
+                  нейрофибромы</p>
                 </div>
               </li>
               <li class="time__item">
-                <p>20 лет</p>
-                <div class="time__descr time__descr_bottom time__descr_012">Гипертония
+                <p class="time__caption">20 лет</p>
+                <div class="time__descr time__descr_bottom time__descr_012"><p>Гипертония
                   <span>(возможна <br class="only-desktop">
                   в любом возрасте, <br class="only-desktop">
-                  но у взрослых чаще)</span></div>
+                    но у взрослых чаще)</span></p></div>
               </li>
             </ul>
           </section>
-          <section class="symptoms">
+          <section class="symptoms work_item">
             <ul class="symptoms__list flex flex_wrap">
               <li class="symptoms__item js-symptoms-card">
                 <div class="flex">
@@ -266,17 +266,17 @@
                 </div>
               </li>
             </ul>
-            <p class="symptoms__text">Подробнее о симптомах НФ1, его проявлениях,
+            <p class="symptoms__text stagger_body">Подробнее о симптомах НФ1, его проявлениях,
               сложностях и особенностях можно </p>
-            <a href="" class="symptoms__link">узнать здесь</a>
+            <a href="" class="symptoms__link stagger_body">узнать здесь</a>
           </section>
           
-          <section class="what">
-            <p class="what__title">Что делать ?</p>
-            <p class="what__subtitle">Если кажется, что у ребенка нейрофиброматоз</p>
+          <section class="what work_item" id="what">
+            <p class="what__title stagger_body">Что делать ?</p>
+            <p class="what__subtitle stagger_body">Если кажется, что у ребенка нейрофиброматоз</p>
             <div class="flex what__wr">
               <div class="what__if">
-                <p>Если вы нашли
+                <p class="">Если вы нашли
                   у вашего ребенка два
                   или более симптома,
                   характерных для НФ1
@@ -286,14 +286,14 @@
                 <ul class="what__List">
                   <li class="what__item">
                     <span>1</span>
-                    <p>
+                    <p class="stagger_body">
                       Постарайтесь не нервничать
                       и&nbsp;не&nbsp;волноваться.
                     </p>
                   </li>
                   <li class="what__item">
                     <span>2</span>
-                    <p>
+                    <p  class="stagger_body">
                       Обратитесь в пациентстскую
                       организацию&nbsp;22/17
                     </p>
@@ -304,7 +304,7 @@
             <div class="what__contacts flex">
               <a href="" class="what__contact what__nf">nf2217.ru</a>
               <a href="" class="what__contact what__phone">
-                <img src="assets/img/what-phone.png" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
               </a>
               <a href="" class="what__contact what__tlg">Telegram</a>
             </div>
@@ -313,8 +313,8 @@
           
         </div>
         <div class="right-btns">
-          <button class="btn btn_grey btn-reset right-btns__btn right-btns__btn_white">Симптомы</button>
-          <button class="btn btn_orange btn-reset right-btns__btn">Что делать</button>
+          <a href="#symptoms" class="main-ancor btn btn_grey btn-reset right-btns__btn right-btns__btn_white">Симптомы</a>
+          <a href="#what" class="main-ancor btn btn_orange btn-reset right-btns__btn">Что делать</a>
         </div>
       </div>
     </div>
@@ -357,6 +357,10 @@
 <script src="assets/vendor/js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/page-scroll-to-id@1.6.8/jquery.malihu.PageScroll2id.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CSSRulePlugin.min.js" integrity="sha512-oYnRsy+bFXYr+btXcKk2dpzfERnCUc5G4GkJ0AO/XSvomLV7Xc7tZVhTsYIz9QzOAw9qo/6qoA6JTpzaYuHUGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!--<script src="assets/js/util/autoPadding.js"></script>-->
 <script src="assets/js/util/crossPlatform.js"></script>
 <script src="assets/js/main.js"></script>
