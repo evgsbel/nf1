@@ -1123,8 +1123,8 @@ body {
   }
   @include r(1024) {
     margin-top: 0;
-    flex-basis: 100%;
-    width: calc(100% - 250px);
+    flex-basis: calc(100% - 190px);
+    width: calc(100% - 190px);
     z-index: 45;
     overflow: visible;
     left: 0;
@@ -1143,29 +1143,13 @@ body {
       max-width: 100%;
       background-color: rgba(172, 109, 72, 0.8);
       max-height: 0;
-      overflow-y: clip;
+      overflow-y: hidden;
       overflow-x: visible;
       transition: max-height .7s ease-in-out;
       position: absolute;
       left: 0;
       width: 100%;
-      &::before,
-      &::after {
-        content: '';
-        z-index: 200;
-        position: absolute;
-        top: 0;
-        width: 30px;
-        height: 100%;
-        background-color: rgba(172, 109, 72, 0.8);
-        transition: all .7s ease-in-out;
-      }
-      &::before {
-        left: -30px;
-      }
-      &::after {
-        right: -30px;
-      }
+
     }
   }
 
@@ -1194,6 +1178,8 @@ body {
       border-radius: 35px;
       @include r(1024) {
         color: #fff;
+        text-align: center;
+        padding: 0 20px;
       }
     }
 
@@ -1282,24 +1268,6 @@ body {
     z-index: 35;
     @include r(1024) {
       display: flex;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 30px;
-      height: 100%;
-      background-color: rgba(245, 218, 201, 0.8);
-    }
-
-    &::before {
-      left: -30px;
-    }
-
-    &::after {
-      right: -30px;
     }
 
     svg {
