@@ -73,6 +73,10 @@
       color: #ae6a49;
       text-decoration: underline;
       line-height: 1.2;
+    transition: color .3s ease-in-out;
+    &:hover {
+      color: #c6bdb5;
+    }
   }
 }
 

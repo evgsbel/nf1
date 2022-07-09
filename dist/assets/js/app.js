@@ -215,7 +215,7 @@ $(function () {
     paused: true
   });
   tl03.staggerFromTo('.right-btns', 1.0, {
-    x: '200%',
+    x: '-50',
     opacity: 0,
     autoAlpha: 0
   }, {
@@ -242,7 +242,7 @@ $(function () {
     paused: true
   });
   tl05.staggerFromTo('.what__tlg', 1.0, {
-    x: '200%',
+    x: '-50',
     opacity: 0,
     autoAlpha: 0
   }, {
@@ -252,14 +252,14 @@ $(function () {
     ease: Power1.easeOut
   }, 4);
   ScrollTrigger.create({
-    trigger: '.what',
+    trigger: '.what__contacts',
     start: "center bottom",
     onEnter: function onEnter() {
       return tl05.play();
     }
   });
   ScrollTrigger.create({
-    trigger: '.what',
+    trigger: '.what__contacts',
     start: "top bottom",
     onLeaveBack: function onLeaveBack() {
       return tl05.pause(0);
@@ -279,14 +279,14 @@ $(function () {
     ease: Power1.easeOut
   }, 4);
   ScrollTrigger.create({
-    trigger: '.what',
+    trigger: '.what__contacts',
     start: "center bottom",
     onEnter: function onEnter() {
       return tl04.play();
     }
   });
   ScrollTrigger.create({
-    trigger: '.what',
+    trigger: '.what__contacts',
     start: "top bottom",
     onLeaveBack: function onLeaveBack() {
       return tl04.pause(0);

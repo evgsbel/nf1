@@ -1133,6 +1133,11 @@ ul {
   color: #ae6a49;
   text-decoration: underline;
   line-height: 1.2;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.nav__link:hover {
+  color: #c6bdb5;
 }
 
 .is-about-page .footer {
@@ -2767,15 +2772,7 @@ body {
   background-position: 100% 30px;
 }
 .is-people-page .bottom-bg {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 20;
-  height: 100%;
-  width: 100%;
-  background-image: url(../img/people-bottom-bg.png);
-  background-repeat: no-repeat;
-  background-position: 0 100%;
+  display: none;
 }
 
 .video {
@@ -2867,7 +2864,7 @@ body {
   margin: 0 auto;
   top: 0;
   height: 1px;
-  width: calc(100vw - 200px);
+  width: calc(100vw - 220px);
   background-color: #fff;
 }
 @media only screen and (max-width: 1024px) {
@@ -2885,7 +2882,12 @@ body {
 .video-text .video__container {
   padding-top: 70px;
   padding-bottom: 300px;
-  background-color: rgba(174, 106, 73, 0.2);
+  padding-left: 55px;
+  padding-right: 70px;
+  background-color: rgb(252, 240, 227);
+  background-image: url("../img/people-bg-cl-01.png"), url("../img/people-bg-cl-02.png");
+  background-repeat: no-repeat;
+  background-position: 100% 90%, -50px -150px;
 }
 @media only screen and (max-width: 768px) {
   .video-text .video__container {
@@ -2893,7 +2895,6 @@ body {
   }
 }
 .video-text__content {
-  max-width: 680px;
   margin: 0 auto;
   position: relative;
   z-index: 70;
@@ -2905,10 +2906,25 @@ body {
     padding-right: 30px;
   }
 }
-.video-text__content p {
+.video-text__caption {
+  font-family: "Roonite", sans-serif;
+  font-size: 38px;
+  line-height: 1.2;
+  color: #1a2246;
+  margin-bottom: 48px;
+}
+.video-text__text {
   font-size: 21px;
   color: #15192b;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+}
+.video-text__bottom-bg {
+  position: absolute;
+  bottom: 0;
+  left: -30%;
+  height: 20%;
+  width: 100%;
+  background-image: url("../img/people-bottom-bg.png");
 }
 
 /*# sourceMappingURL=scss */

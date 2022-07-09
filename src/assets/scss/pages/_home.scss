@@ -1445,15 +1445,7 @@ body {
   }
 
   .bottom-bg {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: 20;
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/people-bottom-bg.png);
-    background-repeat: no-repeat;
-    background-position: 0 100%;
+    display: none;
   }
 }
 
@@ -1529,7 +1521,7 @@ body {
       margin: 0 auto;
       top: 0;
       height: 1px;
-      width: calc(100vw - 200px);
+      width: calc(100vw - 220px);
       background-color: #fff;
       @include r(1024) {
         content: none;
@@ -1551,14 +1543,18 @@ body {
   .video__container {
     padding-top: 70px;
     padding-bottom: 300px;
-    background-color: rgb(174, 106, 73, .2);
+    padding-left: 55px;
+    padding-right: 70px;
+    background-color: rgb(252, 240, 227);
+    background-image: url('../img/people-bg-cl-01.png'), url('../img/people-bg-cl-02.png');
+    background-repeat: no-repeat;
+    background-position: 100% 90%, -50px -150px;
     @include r(768) {
       padding-bottom: 120px;
     }
   }
 
   &__content {
-    max-width: 680px;
     margin: 0 auto;
     position: relative;
     z-index: 70;
@@ -1567,11 +1563,26 @@ body {
       padding-left: 30px;
       padding-right: 30px;
     }
+  }
+  &__caption {
+    font-family: 'Roonite', sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+    color: #1a2246;
+    margin-bottom: 48px;
+  }
 
-    p {
-      font-size: 21px;
-      color: #15192b;
-      margin-bottom: 25px;
-    }
+  &__text {
+    font-size: 21px;
+    color: #15192b;
+    margin-bottom: 30px;
+  }
+  &__bottom-bg {
+    position: absolute;
+    bottom: 0;
+    left: -30%;
+    height: 20%;
+    width: 100%;
+    background-image: url('../img/people-bottom-bg.png');
   }
 }
